@@ -397,7 +397,10 @@ for age_cutoff in cutoffs:
     cust_log = cust_log.merge(cust_log_subset,how='left',on='email')
 
 # Drop null email records
-cust_log = cust_log.loc[cust_log['email']!='']
+cust_log = cust_log.loc[cust_log['email']!='',['email', 'first_order_date', 'latest_order_date', 'lifetime_spend',
+       'lifetime_order_cnt', 'lifetime_aov', 'spend_30_days', 'freq_30_days',
+       'aov_30_days', 'spend_60_days', 'freq_60_days', 'aov_60_days',
+       'spend_90_days', 'freq_90_days', 'aov_90_days']]
 
 # --------------------
 # WRITE TO S3
