@@ -405,7 +405,7 @@ cust_log = cust_log.loc[cust_log['email']!='']
 # WRITE TO S3
 # --------------------
 
-yesterday_date = pd.to_datetime(pd.to_datetime('today') - timedelta(1)).dt.strftime('%Y-%m-%d')
+yesterday_date = pd.to_datetime(pd.to_datetime('today') - timedelta(1)).strftime('%Y-%m-%d')
 
 
 # Create s3 client
