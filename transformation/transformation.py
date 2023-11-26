@@ -298,9 +298,7 @@ REGION = 'us-east-1'
 
 QUERY = f"""SELECT *
             FROM shopify_line_items
-            
-            WHERE DATE(order_date) >= DATE(current_date - interval '180' day)
-            """
+        """
 
 # Query datalake to get quantiy sold per sku for the last 120 days
 # ----
