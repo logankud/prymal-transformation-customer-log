@@ -369,7 +369,7 @@ cust_log.columns = ['email','first_order_date','latest_order_date','lifetime_spe
 # --------------------
 
 # Cutoff age (in days) of customers to assess lifetime value
-cutoffs = [30,60,90]
+cutoffs = [30,60,90,120,150,180,365]
 
 for age_cutoff in cutoffs:
 
@@ -400,7 +400,11 @@ for age_cutoff in cutoffs:
 cust_log = cust_log.loc[cust_log['email']!='',['email', 'first_order_date', 'latest_order_date', 'lifetime_spend',
        'lifetime_order_cnt', 'lifetime_aov', 'spend_30_days', 'freq_30_days',
        'aov_30_days', 'spend_60_days', 'freq_60_days', 'aov_60_days',
-       'spend_90_days', 'freq_90_days', 'aov_90_days']]
+       'spend_90_days', 'freq_90_days', 'aov_90_days',
+       'spend_120_days', 'freq_60_days', 'aov_120_days',
+       'spend_150_days', 'freq_60_days', 'aov_150_days',
+       'spend_180_days', 'freq_60_days', 'aov_180_days',
+       'spend_365_days', 'freq_60_days', 'aov_365_days']]
 
 # --------------------
 # WRITE TO S3

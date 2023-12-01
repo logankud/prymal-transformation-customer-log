@@ -14,6 +14,18 @@ email STRING
 , spend_90_days FLOAT
 , freq_90_days INT
 , aov_90_days FLOAT
+, spend_120_days FLOAT
+, freq_120_days INT
+, aov_120_days FLOAT
+, spend_150_days FLOAT
+, freq_150_days INT
+, aov_150_days FLOAT
+, spend_180_days FLOAT
+, freq_180_days INT
+, aov_180_days FLOAT
+, spend_365_days FLOAT
+, freq_365_days INT
+, aov_365_days FLOAT
 
 )
 PARTITIONED BY 
